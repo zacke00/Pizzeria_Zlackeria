@@ -4,7 +4,7 @@ import React from "react";
 const HomePage:React.FC = () => {
     return (
         <View>
-            <Text>Home</Text>
+            
         </View>
     );
 }
