@@ -1,20 +1,24 @@
 import React from "react";
 import { TouchableOpacity, View, Text, StyleSheet } from "react-native";
 import { SvgProps } from "react-native-svg";
+import { Gradients } from "../../Styles/stylesguide";
 
 type CatagoryButtonProps ={
-    title: String,
-    Color: "blue" | "pink" | "cyan" | "yellow"
+    label: String,
+    color: "blue" | "pink" | "cyan" | "yellow"
     Icon: React.FC<SvgProps>
 }
 
-const CategoryButton: React.FC<CatagoryButtonProps> = ({title, Color, Icon}) => {
+const CategoryButton: React.FC<CatagoryButtonProps> = ({label, color, Icon}) => {
+
+    const Gradient = Gradients[color];
+
     return(
         <TouchableOpacity>
-            <View>
+            <Gradient style={styles.container}>
                 <Icon style={styles.Icon} />
-                <Text style={styles.label}>{title}</Text>
-            </View>
+                <Text style={styles.label}>{label}</Text>
+            </Gradient>
         </TouchableOpacity>
     );
 }
@@ -23,8 +27,8 @@ const styles = StyleSheet.create({
     container: {
         borderRadius: 10,
         padding: 10,
-        width: 100,
-        height: 100,
+        width: 80,
+        height: 75,
         alignItems: "center",
         justifyContent: "center",
     },

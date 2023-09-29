@@ -7,22 +7,30 @@ import { Colors } from "../../Styles/stylesguide";
 const HomePage:React.FC = () => {
     return (
         <View style={styles.container}> 
-        <View style={styles.categoryList}>
+          <View style={styles.categoryList}>
             <CategoryButton
-            title="Planets"
-            Color="blue"
+            label="Planets"
+            color="blue"
             Icon={Assets.icons.Planets}
           />
           <CategoryButton
-            title="Planets"
-            Color="blue"
-            Icon={Assets.icons.Planets}
+            label="Asteroids"
+            color="cyan"
+            Icon={Assets.icons.Asteroids}
           />
           <CategoryButton
-            title="Planets"
-            Color="blue"
-            Icon={Assets.icons.Planets}
+            label="Stars"
+            color="yellow"
+            Icon={Assets.icons.Stars}
           />
+          <CategoryButton
+            label="Galaxies"
+            color="pink"
+            Icon={Assets.icons.Galaxies}
+          />
+          </View>
+          <View>
+            <Text>Teste</Text>
           </View>
         </View>
     );
@@ -39,6 +47,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 16,
       },
+
 })
 
 export default HomePage;
