@@ -10,7 +10,7 @@ const HomeRoutes: React.FC = () => {
     
         return (
             <Tab.Navigator initialRouteName="Start">
-                <Tab.Screen name="Home" component={HomePage} options={{...screenOptions, tabBarIcon: ({focused}) => <Assets.icons.Search style={iconStyle(focused)}/>}}/>
+                <Tab.Screen name="Home" component={HomePage} options={{...screenOptions, tabBarIcon: ({focused}) => <Assets.icons.Search/>}}/>
       
                 <Tab.Screen name="Search" component={HomePage} options={{}}/>
                 <Tab.Screen name="Login" component={HomePage} options={{}}/>
@@ -18,10 +18,7 @@ const HomeRoutes: React.FC = () => {
         );
 };
 
-const iconStyle = ( focused: boolean ) => ({
-    opacity: focused ? 1 : 0.5,
-    marginBottom: focused ? 6 : 0,
-  });
+
 
 const screenOptions = {
     headerShown: false,
